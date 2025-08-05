@@ -1,0 +1,24 @@
+📅 Day 1 of 260 — 5th August 2025
+🚀 Goal: Get internship-ready in InfoSec with 260-day consistency
+
+🔐 Today's Focus: Cross-Site Scripting (XSS)
+
+📘 What I Learned:
+- ✅ Basics of XSS and its impact on web apps
+- ✅ Difference between Reflected, Stored, and DOM-based XSS
+- ✅ Understood how input is injected into the HTML context unsanitized
+
+🧪 Labs Completed (PortSwigger):
+1. 🧪 Reflected XSS into HTML context with nothing encoded — ✅ Solved
+2. 🧪 Stored XSS into HTML context with nothing encoded — ✅ Solved
+3. 🧪 DOM XSS in document.write sink using source location.search — ✅ Solved
+
+💡 Key Takeaway:
+"User input should never be trusted. Always sanitize and encode before rendering into the DOM."
+
+🔧 Tools Used:
+- PortSwigger Web Security Academy
+- Microsoft Edge (worked after retry)
+- GitHub (repo setup complete!)
+
+🔥 Consistency > Intensity
