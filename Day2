@@ -1,0 +1,28 @@
+✅ Day 2 XSS Progress — DOM-Based XSS with jQuery 🧪
+
+Today I worked on understanding DOM-based XSS vulnerabilities using JavaScript/jQuery, specifically how attackers can inject malicious scripts when the browser processes unsafe client-side code.
+
+Here’s what I did:
+
+🔹 Lab 4: DOM XSS in `innerHTML` sink using `location.search`
+- The page used `innerHTML` to inject user input from the URL (`?search=something`) directly into the DOM.
+- I exploited it by passing:
+  ?search=<img src=x onerror=alert(1)>
+- ✅ Learned: Using `innerHTML` without sanitization is dangerous because it parses tags, not just text.
+
+🔹 Lab 5: DOM XSS in jQuery anchor `href` attribute using `location.search`
+- The site used jQuery to update an anchor tag’s `href` with user input from the URL.
+- I injected JavaScript using:
+  ?search=javascript:alert(1)
+- ✅ Learned: If the `href` value isn't validated, users can inject a `javascript:` protocol to execute code.
+
+🔹 Lab 6: DOM XSS in jQuery selector using a hashchange event (Still working on this one)
+- The site updates DOM elements based on changes in the URL `#hash`.
+- My goal is to find a way to inject malicious selectors (like `[onclick=alert(1)]`) or trick it into executing JavaScript when hash changes.
+- 🚧 Still solving, but learning how even hash values can be dangerous when passed into jQuery selectors directly.
+
+📌 Key takeaway: DOM-based XSS happens entirely on the client-side, and using unsafe DOM APIs like `innerHTML`, `href`, and `jQuery selectors` without validation leads to XSS.
+
+Tomorrow, I’ll complete Lab 6 and move to event-based XSS or source changes like `location.hash`, `document.URL`, etc.
+
+#WebSecurity #XSS #LearningInPublic #PortSwigger #Infosec
